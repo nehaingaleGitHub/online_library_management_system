@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="..\static\admin_dashboard.css">
+</head>
+<style>
+table
+{
+  /*background: pink;*/
+  background-image:url("../static/log_regis_img.jpg");
+  margin-left:530;
+  margin-top:100;
+  border-radius:10px;
+  opacity:190%;
+  height: 550px;
+  position: absolute;
+  padding: 7px;
+  width: 600px;
+}
+input
+{
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 34px;
+  width:320px;
+  font-size: 15px;
+  margin-top: -8px;
+  position: absolute;
+  margin-left: -100px; 
+}
+label
+{
+  font-size:25;
+  color:black;
+  margin-left:10;
+  margin-top: -5px;
+  position: absolute;
+}
+input[type="submit"]
+{
+  width:320px;
+  background-color:#FF8C00;
+  margin-top: -5px;
+  margin-left: 180px;
+  position: absolute;
+}
+
+</style>
+<body>
+  <div class="fix-navbar">
+    <a href="stud_dashboard">Students Dashboard</a>
+    <a href="#"> 
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    </a>
+    <a>Welcome : Student Dashboard</a>
+    <a href="stud_home">Log Out</a>
+    <a href="/">Exit</a>
+  </div>
+
+<div class="sidenav">
+  <a href="">Profile</a>
+  <a href="stud_search">Search Book</a>
+  <a href="stud_issuedbook">Add Issued Book</a>
+  <a href="stud_returnbookform">Add Return Book</a>
+  <a href="stud_requestbookform">Add Request Book</a>
+  <a href="stud_dashboard">Check History</a>
+  <!-- <hr>
+  <a href="">Contact</a>
+  <a href="">About Us</a> -->
+  <hr>
+  <a href="stud_home">Log Out</a>
+  <hr>
+  <a href="/">Exit</a>
+</div>
+  
+<table cellspacing="20">
+  <form action="request_update2" method="post">
+    <tr>
+      <td><label style="margin-left: 200px;margin-top: -15px;">Update Request book</label> </td>
+    </tr>
+
+    <tr>
+      <td><label>Book Name</label></td>
+      <td> <label><input type="text" id="book_name1" name="book_name1" value="{{fn}}" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Book Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td><label>Full Name</label></td>
+      <td> <label><input type="text" id="full_name" name="full_name" value="{{da[0][0]}}" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Full Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td><label>Book Name</label></td>
+      <td> <label><input type="text" id="book_name" name="book_name" value="{{da[0][1]}}" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Book Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td><label>Author Name</label></td>
+      <td> <label><input type="text" id="author_name" name="author_name" value="{{da[0][2]}}" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Author Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr>
+
+    <tr>
+      <td><label><input type="submit" value=" Update Request Book"> </label> </td>   
+<!-- a{
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 40px;
+} -->
+  </form>
+</table>
+</body>
+</html>

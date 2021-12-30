@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../static/st.css">
+</head>
+<style>
+table
+{
+  /*background: pink;*/
+background-image:url("../static/log_regis_img.jpg");
+  margin-left:530;
+  margin-top:100;
+  border-radius:10px;
+  opacity:190%;
+  height: 500px;
+  position: absolute;
+  padding: 50px;
+  width: 440px;
+}
+input
+{
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 34px;
+  width:320px;
+  font-size: 15px;
+  margin-top: -60px;
+  position: absolute;
+  
+}
+label
+{
+  font-size:25;
+  color:black;
+  margin-left:-10;
+  margin-top: 10px;
+  position: absolute;
+}
+input[type="submit"]
+{
+  width:320px;
+  background-color:#FF8C00;
+  margin-top: -50px;
+}
+body {  
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../static/img1.jpg");
+  background-repeat:no-repeat;
+  background-size:auto;
+  background-size: 1530px 750px;
+  opacity:100%;
+  margin: 0;
+} 
+.fix-navbar {
+  overflow: hidden;
+  background-color:#FF8C00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: -5px;
+}
+
+.fix-navbar a {
+  float: left;
+  display: blue;
+  color: #f2f2f2; /*fix bar name colorr*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.fix-navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+<body>
+  <div class="fix-navbar">
+    <a href="stud_home">Home</a>
+    <a href="stud_registration">User Sign Up</a>
+    <a href="stud_login">User Login</a>
+    <a href="#"> 
+    &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    </a>
+    <a>Welcome : Home</a>
+    <a href="stud_home">Log Out</a>
+    <a href="/">Exit</a>
+  </div>
+  
+<table cellspacing="20">
+  <form action="read" method="post">
+    <tr>
+      <td><label style="margin-left: 50px;margin-top: -55px;">Register With Us!</label> </td>
+    </tr>
+
+    <tr>
+      <td> <label><input type="text" id="first_name" name="first_name" style=" padding: 1em 6px 1em 2em;" placeholder="Enter First Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td> <label><input type="text" id="last_name" name="last_name" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Last Name" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td> <label><input type="text" id="email" name="email" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Email Address" ></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td><label><input type="Password" id="password" name="password" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Passward" ></label> 
+    </td>
+    </tr>
+
+    <tr>
+      <td><label><input type="submit" value="Register"> </label> </td>
+    </tr> 
+   
+    <tr>
+      <td><a href="stud_login" style="margin-left: 20px;text-decoration: none;"> &nbsp; Already Have Account? Login Here</a></td>
+    </tr>
+
+<!-- a{
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 40px;
+} -->
+  </form>
+</table>
+</body>
+</html>

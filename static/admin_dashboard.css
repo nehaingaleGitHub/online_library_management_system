@@ -1,0 +1,76 @@
+body {  
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../static/admin_img1.jpg");
+/*  background-repeat: no-repeat;
+  width: 1500px;
+  height: 500px;*/
+}
+/*====================Fixed Menu Bar============================*/
+.fix-navbar {
+  overflow: hidden;
+  background-color:#FF8C00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.fix-navbar a {
+  float: left;
+  display: blue;
+  color: #f2f2f2; /*fix bar name colorr*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.fix-navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+position: absolute;
+  padding: 16px;
+  margin-top: 50px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+#a1{
+  background-color: #FF8C00;
+  height: 100px;
+}
+#di1{
+  width: 300px;
+  height: 100px;
+  padding: 30px;  
+  border: 7px solid blue;
+}
+/*=============================fix side bar================*/
+.sidenav {
+  height: 100%;
+  width: 190px;
+  position: fixed;
+  z-index: 1;
+  top: 53;
+  left: 0;
+  background-color: #FF8C00;
+  overflow-x: hidden;
+  padding-top: 15px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  display: block;
+  background-color:#FF8C00;
+}
+.sidenav a:hover {
+  color: black;
+  background: #ddd;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

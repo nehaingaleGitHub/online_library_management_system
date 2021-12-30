@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="..\static\admin_dashboard.css"> -->
+	<title>Python To Html Pages</title>
+</head>
+<style type="text/css">
+table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:hover {background-color: #ddd;}
+
+table, td, th {
+  border: 2px solid black;
+  padding: 5px;
+}
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: 300px;
+  margin-top: 10px;
+ /* background-color: #FF8C00;*/
+background-image:url("../static/log_regis_img.jpg");
+}
+body {  
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../static/admin_img1.jpg");
+/*  background-repeat: no-repeat;
+  width: 1500px;
+  height: 500px;*/
+}
+/*====================Fixed Menu Bar============================*/
+.fix-navbar {
+  overflow: hidden;
+  background-color:#FF8C00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.fix-navbar a {
+  float: left;
+  display: blue;
+  color: #f2f2f2; /*fix bar name colorr*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.fix-navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+position: absolute;
+  padding: 16px;
+  margin-top: 50px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+#a1{
+  background-color: #FF8C00;
+  height: 100px;
+}
+#di1{
+  width: 300px;
+  height: 100px;
+  padding: 30px;  
+  border: 7px solid blue;
+}
+/*=============================fix side bar================*/
+.sidenav {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  z-index: 1;
+ /* top: 53;*/
+  left: 0;
+  background-color: #FF8C00;
+  overflow-x: hidden;
+  /*padding-top: 15px;*/
+  margin-top: -27px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  display: block;
+  background-color:#FF8C00;
+}
+.sidenav a:hover {
+  color: black;
+  background: #ddd;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+input{
+  border:2px solid black;
+  border-radius: 10px;
+}
+</style>
+<script type="text/javascript">
+  function search(){
+     var fn=document.getElementById('fn2').value;
+     alert(fn);
+     window.location.replace("/search_adminissued?fn="+fn);
+   }
+</script>
+<body>
+  <div class="fix-navbar">
+    <a href="admin_dashboard">Admin Dashboard/Control Panel</a>
+    <a href="#"> 
+      &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+    </a>
+    <a>Welcome : Admin Dashboard</a>
+    <a href="admin_home">Log Out</a>
+    <a href="/">Exit</a>
+  </div>
+
+<div class="sidenav">
+  <a href="">Profile</a>
+  <a href="admin_addbook">Add Books</a>
+  <a href="search_book">Search Book</a>
+  <a href="table_issuedbook">Issued Book</a>
+  <a href="table_adminreturn">Return Book</a>
+  <a href="table_adminrequest">Request Book</a>
+  <hr>
+  <!-- <a href="">Contact</a>
+  <a href="">About Us</a>
+  <hr> -->
+  <a href="admin_home">Log Out</a>
+  <hr>
+  <a href="/">Exit</a>
+</div>
+
+<div style="margin-top: 80px;" ><h1 style="text-align: center;color: white;">Student Issued Book Details</h1></div>
+
+<table id="table1" >
+  <tr>
+    <th colspan="7">Search Book :
+      <input type="text" name="fn2" id="fn2">
+      <input type="button" name="" id="btn1" value="search" onclick="search()">
+    </th>
+  </tr>
+
+	<tr style="background-color: orange;">
+    <label>
+      <th>Full Name</th>
+		<th>Book Id</th>
+    <th>Book Name</th>
+    <th>Book Author</th>
+    <th>Quantity</th>
+    </label>
+	</tr>
+{%for i in da %}
+	<tr>
+		<td>{{i[0]}}</td>
+		<td>{{i[1]}}</td>
+		<td>{{i[2]}}</td>
+		<td>{{i[3]}}</td>
+    <td>{{i[4]}}</td>
+	</tr>
+{% endfor %}
+</table>
+</body>
+</html>

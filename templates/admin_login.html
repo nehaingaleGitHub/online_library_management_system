@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+table
+{ 
+  /*background: pink;*/
+  background-image:url("../static/log_regis_img.jpg");
+  margin-left:530;
+  margin-top:140;
+  border-radius:10px;
+  opacity:190%;
+  height: 400px;
+  position: absolute;
+  padding: 20px;
+  width: 400px;
+} 
+input
+{ 
+  border: 2px solid black;
+  border-radius: 15px;
+  height: 34px;
+  width:320px;
+  font-size: 15px; 
+} 
+label
+{
+  font-size:25;
+  color:black;
+  margin-left:-10;
+  margin-top: 10px;
+  position: absolute;
+}
+input[type="submit"]
+{
+  width:320px;
+  background-color: #FF8C00;
+  margin-top: 20px;
+
+}
+body {  
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../static/admin_img1.jpg");
+  background-repeat:no-repeat;
+  background-size:auto;
+  background-size: 1530px 750px;
+  
+}
+/*====================Fixed Menu Bar============================*/
+.fix-navbar {
+  overflow: hidden;
+  background-color:#FF8C00;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: -15px;
+}
+
+.fix-navbar a {
+  float: left;
+  display: blue;
+  color: #f2f2f2; /*fix bar name colorr*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.fix-navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</body>
+  <div class="fix-navbar">
+    <a href="admin_home">Admin Home</a>
+    <a href="admin_regis">Admin Sign Up</a>
+    <a href="admin_login">Admin Login</a>
+    <a href="#"> 
+    &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+    </a>
+    <a>Welcome : Admin Home</a>
+    <a href="admin_home">Log Out</a>
+    <a href="/">Exit</a>
+  </div>
+
+<table cellspacing="20">
+  <form action="adminlogin_check1" method="post">
+    <tr>
+      <td><label>Username </label> </td>
+    </tr>
+
+    <tr>
+      <td id="user_id" > <label><input type="text" id="email" name="email" style=" padding: 1em 6px 1em 2em;" placeholder="Enter email id "></label> <!-- padding in which 2em shows distance of placeceholder --></td>
+    </tr> 
+
+    <tr>
+      <td><label>Passward</label> </td>
+    </tr>
+
+    <tr>
+      <td id="pass_id"><label><input type="Password" id="password" name="password" style=" padding: 1em 6px 1em 2em;" placeholder="Enter Passward"></label></td> 
+    </tr>
+
+    <tr>
+      <td><label><input type="submit" value="Login"> </label> </td>
+    </tr> 
+
+    <tr>
+  <td> <label><h1 style="color: red;font-size: 20;">{{he}}</h1></label> </td>
+  </tr>
+
+<tr>
+      <td><a href="admin_regis" style="margin-left: 100px;text-decoration: none;margin-top: 20px;position: absolute;"> &nbsp; Register With Us!</a></td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>
